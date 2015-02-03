@@ -19,7 +19,7 @@ public class WelcomePageSteps {
 	
 	@When("I enter the welcome page providing <name> as a name")
 	public void welcomePage(@Named("name") String name) {
-		driver.get("http://localhost:8080/hiveServer/hello/" + name);
+		driver.get("http://localhost:8080/HiveServer/hello/" + name);
 		this.name = name;
 	}
 	
