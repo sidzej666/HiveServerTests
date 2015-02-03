@@ -1,0 +1,27 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+sourceCompatibility = 1.8
+version = '1.0'
+jar {
+	manifest {
+		attributes 'Implementation-Title': 'The Hive Server Acceptance Tests', 'Implementation-Version': version
+	}
+}
+
+repositories { mavenCentral() }
+
+//Project dependencies
+dependencies {
+	compile 'ch.qos.logback:logback-classic:1.1.2'
+	compile 'org.springframework:spring-webmvc:4.0.6.RELEASE'
+	compile 'jstl:jstl:1.2'
+	compile 'com.fasterxml.jackson.core:jackson-databind:2.5.0'
+	compile 'junit:junit:4.11'
+	compile 'org.jbehave:jbehave-core:3.9.5'
+	compile 'org.jbehave:jbehave-spring:3.9.5'
+	compile 'org.seleniumhq.selenium:selenium-java:2.44.0'
+	compile ('com.opera:operadriver:1.5') {
+		//exclude group: 'org.seleniumhq.selenium:1.5', module: 'selenium-remote-driver'
+	}
+}
