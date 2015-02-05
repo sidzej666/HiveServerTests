@@ -9,12 +9,17 @@ jar {
 	}
 }
 
-repositories { mavenCentral() }
+repositories { 
+	mavenLocal()
+	mavenCentral() 
+}
 
 //Project dependencies
 dependencies {
 	compile 'ch.qos.logback:logback-classic:1.1.2'
 	compile 'org.springframework:spring-webmvc:4.0.6.RELEASE'
+	compile 'org.springframework:spring-context:4.0.6.RELEASE'
+	compile 'com.fasterxml.jackson.core:jackson-core:2.5.0'
 	compile 'jstl:jstl:1.2'
 	compile 'com.fasterxml.jackson.core:jackson-databind:2.5.0'
 	compile 'junit:junit:4.11'
@@ -24,4 +29,6 @@ dependencies {
 	compile ('com.opera:operadriver:1.5') {
 		//exclude group: 'org.seleniumhq.selenium:1.5', module: 'selenium-remote-driver'
 	}
+	compile 'pkstudio:HiveServer:1.0'
+	compile 'javax.inject:javax.inject:1'
 }
